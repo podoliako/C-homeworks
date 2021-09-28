@@ -1,0 +1,3 @@
+/home/egorchan/C-tasks/abacaba/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/egorchan/C-tasks/abacaba/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/egorchan/C-tasks/abacaba/cmake-build-debug/CMakeFiles/abacaba.dir
