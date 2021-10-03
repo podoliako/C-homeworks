@@ -46,8 +46,10 @@ int main() {
             printf("%s ", tokens[i]);
     }
     printf("\nThere were %d delimiters", counter);
-    for(int i = 0; i < counter; i++) free(tokens[i]);
+   
+    for(int i = 0; i < counter; i++) 
+       free(tokens[i]);
 
     return 0;
 }
-
+// TODO: для входной строки " a " число найденных слов равно 2, а должно быть 1
