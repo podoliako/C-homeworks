@@ -3,25 +3,29 @@
 #define GAME_FUNCTIONS_H
 
 
-int makeMove(int* Positions, int position, int player){
-    if (Positions[position] != 0) return 0;
+int makeMove(int* positions, int position, int player){
+    if (positions[position] != 0) return 0;
     else {
-        Positions[position] = player;
+        positions[position] = player;
         return 1;
     }
 }
 
 void printField(const int* Positions){
     for(int i = 0; i < 3; i++){
+        if(i == 0) printf("╔═══╦═══╦═══╗\n");
+        else if(i == 1 || i == 2) printf("╠═══╬═══╬═══╣\n");
+        printf("║");
         for(int j = 0; j < 3; j++){
-            printf("|");
-            if(Positions[i * 3 + j] == 0) printf(" ");
-            else if(Positions[i * 3 + j] == 1) printf("X");
-            else if(Positions[i * 3 + j] == 2) printf("O");
-            printf("|");
+            if(j != 0) printf("║");
+            if(Positions[i * 3 + j] == 0) printf("   ");
+            else if(Positions[i * 3 + j] == 1) printf(" X ");
+            else if(Positions[i * 3 + j] == 2) printf(" O ");
         }
+        printf("║");
         printf("\n");
     }
+    printf("╚═══╩═══╩═══╝\n\n");
 }
 
 int checkIfPlayerWon(const int* Positions, int player){
