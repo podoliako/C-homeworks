@@ -25,6 +25,7 @@ void findFile(char folder[255], int maxDepth, int depth, char key[100])
     }
 }
 
+// fix it: только с помощью дебагера можно проверить работоспособность? нужно вывести список мест, где нашли файлы
 int main(int argc, char **argv)
 {
     char filename[256];
